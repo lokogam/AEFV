@@ -87,3 +87,6 @@ url	URL del documento
 name	Nombre del documento
 extension	Extensión del documento
 size	Peso del documento
+
+
+ cambios rama duvan
