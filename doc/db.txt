@@ -1,0 +1,89 @@
+Tabla: vehicle (vehículo)
+Campo	Descripción
+id	Identificador único del vehículo
+photo_id	Identificador de la foto del vehículo
+vehicle_type	Tipo de vehículo
+brand	Marca del vehículo
+model	Modelo del vehículo
+engine_displacement	Cilindrada del motor del vehículo
+year	Año de fabricación del vehículo
+fuel_load	Carga de combustible del vehículo
+technical_review	Estado de la revisión técnica
+maintenance	Estado de la mantención del vehículo
+insurance	Estado del seguro del vehículo
+
+Tabla: user (usuario)
+Campo	Descripción
+id	Identificador único del usuario
+image_id	Identificador de la imagen del perfil del usuario
+first_name	Nombre del usuario
+last_name	Apellido del usuario
+role	Rol del usuario
+rut	RUT del usuario (identificación fiscal)
+email	Correo electrónico del usuario
+password	Contraseña del usuario
+phone	Teléfono del usuario
+driver_license	Licencia de conducir del usuario
+afp_certificate	Certificado de AFP del usuario
+criminal_record_cert	Certificado de antecedentes
+
+Tabla: company (empresa)
+Campo	Descripción
+id	Identificador único de la empresa
+image	Imagen de la empresa
+name	Nombre de la empresa
+rut	RUT de la empresa (identificación fiscal)
+address	Dirección de la empresa
+address_number	Número de la dirección
+city	Ciudad de la dirección
+
+Tabla: manager (encargado)
+Campo	Descripción
+id	Identificador único del encargado
+company_id	Identificador de la empresa asociada
+phone	Teléfono del encargado
+email	Correo electrónico del encargado
+name	Nombre del encargado
+
+Tabla: role (rol)
+Campo	Descripción
+id	Identificador único del rol
+name	Nombre del rol
+description	Descripción del rol
+
+Tabla: order (orden)
+Campo	Descripción
+id	Identificador único de la orden
+order_type	Tipo de orden (1, 2, 3, 4, 5)
+company_id	Identificador de la empresa asociada
+manager_id	Identificador del encargado de la orden
+escort_id	Identificador del escolta asignado
+assigned_vehicle_id	Identificador del vehículo asignado
+driver_id	Identificador del chofer asignado
+start_address	Dirección de inicio
+end_address	Dirección de destino
+start_date	Fecha de inicio
+end_date	Fecha de fin
+observations	Observaciones
+pickup_vehicle_id	Identificador del vehículo para recoger
+order_status	Estado de la orden
+
+Tabla: profile_image (imagen de perfil)
+Campo	Descripción
+id	Identificador único de la imagen
+image_type	Tipo de imagen (vehículo, usuario, empresa, orden)
+related_id	Identificador de la entidad relacionada
+url	URL de la imagen
+name	Nombre de la imagen
+extension	Extensión de la imagen
+size	Peso de la imagen
+
+Tabla: document (documento)
+Campo	Descripción
+id	Identificador único del documento
+document_type	Tipo de documento (vehículo, orden, chofer, escolta)
+related_id	Identificador de la entidad relacionada
+url	URL del documento
+name	Nombre del documento
+extension	Extensión del documento
+size	Peso del documento
